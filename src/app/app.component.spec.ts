@@ -1,14 +1,14 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { TimesDirective } from './times.directive';
+import { ClassDirective } from './class.directive';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AppComponent, TimesDirective, ClassDirective],
     }).compileComponents();
-  }));
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -16,16 +16,15 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'pages'`, () => {
+  it('should have currentPage as 0', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('pages');
+    expect(app.currentPage).toBe(0);
   });
 
-  it('should render title', () => {
+  it('should have 16 images', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('pages app is running!');
+    const app = fixture.componentInstance;
+    expect(app.images.length).toBe(16);
   });
 });

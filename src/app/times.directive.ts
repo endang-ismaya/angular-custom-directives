@@ -2,6 +2,7 @@ import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
 
 @Directive({
   selector: '[appTimes]',
+  standalone: true
 })
 export class TimesDirective {
   constructor(

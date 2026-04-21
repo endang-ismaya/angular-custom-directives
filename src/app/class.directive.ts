@@ -1,10 +1,11 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef, inject, Input } from '@angular/core';
 
 @Directive({
   selector: '[appClass]',
+  standalone: true
 })
 export class ClassDirective {
-  constructor(private element: ElementRef) {}
+  private element = inject(ElementRef);
 
   @Input('appClass') set classNames(classObj: any) {
     for (let key in classObj) {

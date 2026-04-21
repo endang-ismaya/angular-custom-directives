@@ -1,2 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.img-thumbnail {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 24px;
+}
+
+.mt-5 {
+  margin-top: 48px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
